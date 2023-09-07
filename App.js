@@ -13,20 +13,20 @@ export default function App() {
     }
   }
 
-  async function pressIn() {
-    console.log("Pressing IN");
+  async function pressIn(event) {
+    console.log("Pressing IN", event);
   }
 
-  async function pressOut() {
-    console.log("Pressing Out");
+  async function pressOut(event) {
+    console.log("Pressing Out", event);
   }
 
-  async function press() {
-    console.log("Regular Press");
+  async function press(event) {
+    console.log("Regular Press", event);
   }
 
-  async function longPress() {
-    console.log("Long Press");
+  async function longPress(event) {
+    console.log("Long Press", event);
   }
 
   async function hoverIn(event) {
