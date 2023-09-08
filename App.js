@@ -14,38 +14,40 @@ export default function App() {
   }
 
   async function pressIn(event) {
-    console.log("Pressing IN", event);
+    // console.log("Pressing IN", event);
   }
 
   async function pressOut(event) {
-    console.log("Pressing Out", event);
+    // console.log("Pressing Out", event);
   }
 
   async function press(event) {
-    console.log("Regular Press", event);
+    // console.log("Regular Press", event);
   }
 
   async function longPress(event) {
-    console.log("Long Press", event);
+    // console.log("Long Press", event);
   }
 
   async function hoverIn(event) {
-    console.log("Hover In", event);
+    // console.log("Hover In", event);
     return styles.button_hover_in;
   }
 
   async function hoverOut(event) {
-    console.log("Hover Out", event);
+    // console.log("Hover Out", event);
   }
 
   async function switchFlip() {
     flipFlipable(!flipable);
-    console.log("Switch Flip", flipable);
+    // console.log("Switch Flip", flipable);
   }
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app! Friend </Text>
+      <Text>
+        Open up App.js to start working on your app! Frienderino Friend
+      </Text>
       <Pressable
         onLongPress={longPress}
         onPress={press}
@@ -58,9 +60,12 @@ export default function App() {
       >
         <Text>Howdy</Text>
       </Pressable>
-      <Switch onValueChange={switchFlip} value={flipable} />
-      <StatusBar style="auto" />
+      {/* <Switch onValueChange={switchFlip} value={flipable} /> */}
+      {/* <StatusBar style="auto" /> */}
     </View>
+    // <View style={styles.container}>
+    //   <Text>Hello</Text>
+    // </View>
   );
 }
 
