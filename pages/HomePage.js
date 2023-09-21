@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
-import InputTodo from "../components/InputTodo";
+import TodoList from "../components/TodoList";
 
 export default function HomePage() {
   return (
     <View>
-      <InputTodo />
+      <TodoList />
     </View>
   );
 }
