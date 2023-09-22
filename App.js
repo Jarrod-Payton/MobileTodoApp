@@ -8,12 +8,12 @@ import {
   Pressable,
   Platform,
 } from "react-native";
-import HomePage from "./pages/HomePage";
+import ListPage from "./pages/ListPage";
 export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.pageContainer}>
-        <HomePage />
+        <ListPage />
       </View>
     </View>
   );
