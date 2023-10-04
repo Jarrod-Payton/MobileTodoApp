@@ -1,15 +1,26 @@
+import { useRef } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 
-export default function InputTodo() {
+export default function InputTodo({ clear, add }) {
+  const todoNameRef = useRef();
+
+  async function clearBtn() {
+    clear();
+  }
+
+  async function addTodo() {
+    add(todoNameRef.current.value);
+  }
+
   return (
     <View style={styles.parent}>
-      <Pressable style={styles.clearBtn}>
+      <Pressable style={styles.clearBtn} onPress={clearBtn}>
         <Text>Clear</Text>
       </Pressable>
 
-      <TextInput style={styles.inputField} defaultValue="Hello World" />
+      <TextInput style={styles.inputField} ref={todoNameRef} />
 
-      <Pressable style={styles.addBtn}>
+      <Pressable style={styles.addBtn} onPress={addTodo}>
         <Text>Add</Text>
       </Pressable>
     </View>

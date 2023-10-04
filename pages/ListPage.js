@@ -1,14 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import TodoList from "../components/TodoList";
-import { useRef, useState } from "react";
 
 export default function ListPage() {
-  const [todos, setTodos] = useState([]);
-  const todoNameRef = useRef();
+  const listId = 1;
 
   return (
     <View>
-      <TodoList />
+      <TodoList listId={listId} />
     </View>
   );
 }
