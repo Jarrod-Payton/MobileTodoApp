@@ -17,7 +17,8 @@ export default function TodoList({ listId }) {
   }
 
   async function clear() {
-    console.log("clear");
+    const filteredTodos = todos.filter((todo) => !todo.completed);
+    setTodos(filteredTodos);
   }
 
   async function addTodo(todoName) {

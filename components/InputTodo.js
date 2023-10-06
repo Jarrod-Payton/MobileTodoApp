@@ -9,7 +9,8 @@ export default function InputTodo({ clear, add }) {
   }
 
   async function addTodo() {
-    add(todoNameRef.current.value);
+    await add(todoNameRef.current.value);
+    todoNameRef.current.value = "";
   }
 
   return (
